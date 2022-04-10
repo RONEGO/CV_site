@@ -65,14 +65,26 @@
                     </div>
                 </div>
                 <div>
-                    <a href="Documents/Resume.docx" target="_blank">
-                        <div id="light">
+                    <a id="CV_link" target="_blank">
+                        <div id="light" onclick="openCV_file()">
                             <svg viewBox="0 0 300 300"><defs></defs><rect class="cls-1" y="265" width="300" height="35" rx="17.5"/><path class="cls-1" d="M493.06-247a16.45,16.45,0,0,0-24.47,0l-28.15,30.28v-149.2c0-10.29-7.75-18.62-17.31-18.62s-17.3,8.33-17.3,18.62v149.2L377.68-247a16.46,16.46,0,0,0-24.48,0,19.63,19.63,0,0,0,0,26.33l45.46,48.89c1.19,1.52,9.89,12.24,24.47,12.24a31.94,31.94,0,0,0,24.48-12.24l45.45-48.89A19.63,19.63,0,0,0,493.06-247Z" transform="translate(-273.13 384.55)"/></svg>
                             <br>
                             <span id ="lang_Download"></span>
                         </div>
                     </a>
+                    
                 </div>
+                <script>
+                    function openCV_file() {
+                        let hash = window.location.hash.replace('#','');
+
+                        let ld = document.getElementById('CV_link');
+                        ld.setAttribute('href','Documents/Resume_' + hash +'.pdf');
+                        ld.click()
+                        // ld.setAttribute('href', 'google.com');
+                        // ld.click();
+                    }
+                </script>
             </div>
             
         </header>
@@ -164,7 +176,7 @@
                         <span>UIKit, Foundation, Coredata, Realm, Alamofire, AVFoundation, Firebase </span>
                     </li>
                     <li><div>Git:               </div>  
-                        <span>Github, Bitbucket </span>
+                        <span>GitHub, Bitbucket </span>
                     </li>
                 </ul>
                 <h4 id="lang_WhatICan">         </h4>

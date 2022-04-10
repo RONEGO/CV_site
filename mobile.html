@@ -40,34 +40,58 @@
             <div class="icons">
                 <div>
                     <div onclick="ScrollTo('AboutMe')">
-                        <img src="Imgs/icons/home.svg" alt="Home"><br>
-                        обо мне
+                        <img src="Imgs/icons/home.svg" alt="Home">
+                        <br>
+                        <span id ="lang_About"></span>
                     </div>
                 </div>
                 <div>
                     <div onclick="ScrollTo('WhatIKnow')">
-                        <img src="Imgs/icons/me.svg" alt="Me"><br>
-                        навыки
+                        <img src="Imgs/icons/me.svg" alt="Home">
+                        <br>
+                        <span id ="lang_Skills"></span>
                     </div>
                 </div>
                 <div>
                     <div onclick="ScrollTo('Projects')">
-                        <img src="Imgs/icons/rocket.svg" alt="Project"><br>
-                        проекты
+                        <img src="Imgs/icons/rocket.svg" alt="Home">
+                        <br>
+                        <span id ="lang_Projects"></span>
                     </div>
                 </div>
                 <div>
                     <a href="Documents/Resume.docx" target="_blank">
-                        <div>
-                            <img src="Imgs/icons/download.svg" alt="Download"><br>
-                            скачать
+                        <div id="light">
+                            <img src="Imgs/icons/download.svg" alt="Home">
+                            <br>
+                            <span id ="lang_Download"></span>
                         </div>
                     </a>
-                    
                 </div>
             </div>
+            <script type="text/javascript" src="Scripts/lang_switcher.js">
+            </script>
+            <div id="language_switcher_container">
+
+                <div id="switcher"></div>
+
+                <div class="language_switcher" onclick="moveSwitcher(0)"> 
+                    RU
+                </div>
+                <div class="language_switcher" onclick="moveSwitcher(1)"> 
+                    EN
+                </div>
+                
+            </div>
+
+            <script> 
+                window.onload = function() {
+                    setAllSwitchers();
+                };
+            </script>
         </header>
         <main>
+            <br>
             <div class="photo">
                 <img src="Imgs/photo.png" alt="Photo" class="egor">
                 <div class="gradient"></div>
@@ -101,31 +125,80 @@
             </div>
             <hr>
             <div class="info_container">
-                <h1>Геронин Егор</h1>
-                <h2>Москва/ IOS Разработчик</h2>
+                <h1 id="lang_name"></h1>
+                <h2 id="lang_Junior_iOS"></h2>
             </div>
 
             <div id="AboutMe" class="info_container">
-                <h3>Обо мне</h3>
+                <h3 id="lang_AboutHeader">Обо мне</h3>
                 <ul>
-                    <li><div>Образование:</div>3-й курс (Бакалавр), Прикладная информатика, Национальный Исследовательский Университет Московский Институт Электронной Техники ('23)</li>
-                    <li><div>Возраст:</div>21 год</li>
-                    <li><div>Гражданство:</div>Россия</li>
+                    <li><div    id="lang_Education">       </div>
+                        <span   id="lang_EducationInfo">   </span>
+                    </li>
+                    <li><div    id="lang_Age">       </div>
+                        <span   id="lang_AgeInfo">   </span>
+                    </li>
+                    <li><div    id="lang_Citizenship">       </div>
+                        <span   id="lang_CitizenshipInfo">   </span>
+                    </li>
                 </ul>
             </div>
             <div id="WhatIKnow" class="info_container">
-                <h3>Что я умею</h3>
+                <h3 id="lang_SkillsHeader">     </h3>
+                <h4 id="lang_SoftwareStack">    </h4>
                 <ul>
-                    <li><div>Языки программирования:</div>SWIFT, Shell, C#, Objective-C, C++, Python, SQL, HTML/CSS/JavaScript</li>
-                    <li><div>Программы:</div>Adobe Creative Pack (Photoshop, Illustrator, Premier), Unity3D, Xcode, Visual Studio, Visual Studio Code, Affinity Photo, Blender</li>
-                    <li><div>Языки:</div>Русский, Английский (Advanced), Французский (B2)</li>
-                    <li><div>Имел опыт работы с и интегрирования SDK:</div>TinySauce, GameAnalytics, Facebook, AdMob, UnityAds, UnityAnalytics</li>
-                    <li><div>Имел опыт работы с операционными системами:</div>MacOS, Linux, Windows</li>
-                    <li><div>Выпускал свои проекты на:</div>AppStore, GooglePlay</li>
+                    <li><div id="lang_ProLanguages"></div>
+                        <span>Swift, Shell, Objective-C, SQL    </span>
+                    </li>
+                    <li><div id="lang_Programms">   </div>  
+                        <span>Xcode, Simulator, iTerm2  </span>
+                    </li>
+                    <li><div id="lang_Frameworks">  </div>
+                        <span>UIKit, Foundation, Coredata, Realm, Alamofire, AVFoundation, Firebase </span>
+                    </li>
+                    <li><div>Git:               </div>  
+                        <span>GitHub, Bitbucket </span>
+                    </li>
+                </ul>
+                <h4 id="lang_WhatICan">         </h4>
+                <ul>
+                    <li><div id="lang_ProLanguages2"></div>
+                        <span>Swift, Shell, C#, Objective-C, C++, Python, SQL, HTML/CSS/JavaScript </span>    
+                    </li>
+                    <li><div id="lang_Programms2"></div>
+                        <span>Creative Pack (Photoshop, Illustrator, Premier), Unity3D, Xcode, Visual Studio, Visual Studio Code, Affinity Photo, Blender</span>
+                    </li>
+                    <li><div    id="lang_Languages">       </div>
+                        <span   id="lang_LanguagesList">  </span>
+                    </li>
+                    <li><div    id="lang_SDK">      </div>
+                        <span>TinySauce, GameAnalytics, Facebook, AdMob, UnityAds, UnityAnalytics</span>
+                    </li>
+                    <li><div    id="lang_OS">       </div>
+                        <span>Mac, Linux, Windows</span>
+                    </li>
+                    <li>
+                        <div    id="lang_Platforms"></div>
+                        <span>AppStore, GooglePlay</span>
+                    </li>
                 </ul>
             </div>
             <div id="Projects" class="info_container">
-                <h3>Мои проекты <div style="font-weight: 200; display:inline-block;">(AppStore)</div></h3>
+                <h3 id="lang_Experience">   </h3>
+                <h4 id="lang_WhereIWorked"> </h4>
+                <li class="complany_worked">
+                    <h1> GORA Studio </h1><h2 id="lang_AsJuniorDev"></h2>
+                    <h3 id="lang_GORA_dates"></h3>
+                    <div class="projects_container" style="width: 25%;">
+                        <div>
+                            <a href="https://apps.apple.com/us/app/arround-video-streams-chats/id1435766899" target="_blank">
+                                <img src="Imgs/apps/zhara_icon.jpg">
+                            </a>
+                        </div>
+                    </div>
+                 </li>
+
+                <h4 id="lang_MyProjects"> </h4>
                 <div class="projects_container">
                     <div>
                         <a href="https://apps.apple.com/ru/app/hexanomia/id1535262998" target="_blank">
@@ -137,13 +210,13 @@
                             <img src="Imgs/apps/FishCity_icon.png">
                         </a>
                     </div>
-                </div>
-                <div class="projects_container">
                     <div>
                         <a href="https://apps.apple.com/us/app/tricky-path-merry-christmas/id1599964008?l=ru" target="_blank">
                             <img src="Imgs/apps/TP_icon.png">
                         </a>
                     </div>
+                </div>
+                <div class="projects_container" style="width: 33.333%;">
                     <div>
                         <a href="https://apps.apple.com/us/app/jane-thunder/id1564790903" target="_blank">
                             <img src="Imgs/apps/JaneThunder_icon.png">

@@ -51,11 +51,11 @@ let languages = {
         "lang_SkillsHeader":    "Skills",
         "lang_SoftwareStack":   "My Software Stack",
         "lang_ProLanguages":    "Programming languages:",
-        "lang_Programms":       "Programms:",
+        "lang_Programms":       "Programs:",
         "lang_Frameworks":      "Frameworks:",
         "lang_WhatICan":        "What I can",
         "lang_ProLanguages2":   "Programming languages:",
-        "lang_Programms2":      "Programms:",
+        "lang_Programms2":      "Programs:",
         "lang_Languages":       "Languages:",
         "lang_LanguagesList":   "Russian, English (Advanced), French (B2)",
         "lang_SDK":             "Experienced in working with and integrating the SDK:",
@@ -73,6 +73,7 @@ var switchers;
 var prevIndex = -1;
 
 function setAllSwitchers() {
+    console.log('set up');
     switchers = document.getElementsByClassName('language_switcher')
     let width_switcher =  100 / switchers.length - 2;
     document.getElementById('switcher').style.width = width_switcher+"%";
@@ -122,7 +123,10 @@ function changeLanguage(index) {
     }
     for (var key in language) {
         // console.log(key + " ~> " + language[key]);
-        document.getElementById(key).textContent = language[key];
+        var element = document.getElementById(key);
+        if (element != null) {
+            element.textContent = language[key];
+        }
     }
 
     setHash(index)
