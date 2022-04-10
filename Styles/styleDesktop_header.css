@@ -1,0 +1,82 @@
+
+header
+{
+    position: fixed;
+    z-index: 1000;
+    top: 30px;
+    left: 5%;
+    right: 5%;
+
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 10px 10px rgba(71, 160, 114, 0.25);
+    border-radius: 50px;
+
+    width: 75%;
+    min-height: 100px;
+    height: 10vh;
+    background-image: linear-gradient(rgb(40, 40, 40),rgba(30, 30, 30));
+
+}
+
+.hide_up
+{
+    position: fixed;
+    z-index: 900;
+    top: 0px;
+
+    background-color: rgba(30, 30, 30);
+    height: 30px;
+    width: 100%;
+}
+
+.icons
+{
+    width: 50%;
+    height: 100%;
+
+    position: sticky;
+    top: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+    display: table;
+}
+
+.icons div
+{
+    display: table-cell;
+    position: relative;
+
+    fill: #fff;
+    color: #fff;
+    font-size: 16px;
+}
+
+.icons div:hover
+{
+    fill: rgba(71, 160, 114);
+    color: rgba(71, 160, 114);
+}
+
+
+.icons div div
+{
+    cursor: pointer;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 60px;
+
+    text-align: center;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+.icons div div svg
+{
+    height: 35px;
+}

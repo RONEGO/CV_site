@@ -1,0 +1,158 @@
+<script type="text/javascript" src="SCripts/consts.js"></script>
+<script type="text/javascript">
+
+    function reportWindowSize()
+    {
+        if (document.body.clientWidth > Options.width) 
+        {
+            document.location = "index.html";
+        }
+    }
+
+    window.onresize = reportWindowSize;
+
+</script>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Styles/styleMobile_header.css">
+        <link rel="stylesheet" href="Styles/styleMobile_main.css">
+        <title>Егор Геронин</title>
+    </head>
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script>
+        function ScrollTo(name)
+        {
+            var elmnt = document.getElementById(name).getBoundingClientRect();
+            var position = elmnt.top + window.scrollY;
+
+            window.scrollTo({
+                    top: position,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+        }
+    </script>
+    <body>
+        <header>
+            <div class="icons">
+                <div>
+                    <div onclick="ScrollTo('AboutMe')">
+                        <img src="Imgs/icons/home.svg" alt="Home"><br>
+                        обо мне
+                    </div>
+                </div>
+                <div>
+                    <div onclick="ScrollTo('WhatIKnow')">
+                        <img src="Imgs/icons/me.svg" alt="Me"><br>
+                        навыки
+                    </div>
+                </div>
+                <div>
+                    <div onclick="ScrollTo('Projects')">
+                        <img src="Imgs/icons/rocket.svg" alt="Project"><br>
+                        проекты
+                    </div>
+                </div>
+                <div>
+                    <a href="Documents/Resume.docx" target="_blank">
+                        <div>
+                            <img src="Imgs/icons/download.svg" alt="Download"><br>
+                            скачать
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="photo">
+                <img src="Imgs/photo.png" alt="Photo" class="egor">
+                <div class="gradient"></div>
+                <div class="socialNetworks">
+                    <div>
+                        <a target="_blank" href="https://hh.ru/applicant/resumes/view?resume=c483ce23ff09a2e2b10039ed1f5671574e6b71">
+                            <img src="Imgs/icons/hh.svg">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="mailto:geronin.yegor@gmail.com">
+                            <img src="Imgs/icons/mail.svg">
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://wa.me/79164794793">
+                            <img src="Imgs/icons/whatsapp.svg">
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://t.me/RON3GO">
+                            <img src="Imgs/icons/telegram.svg">
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="https://github.com/RONEGO">
+                            <img src="Imgs/icons/git.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="info_container">
+                <h1>Геронин Егор</h1>
+                <h2>Москва/ IOS Разработчик</h2>
+            </div>
+
+            <div id="AboutMe" class="info_container">
+                <h3>Обо мне</h3>
+                <ul>
+                    <li><div>Образование:</div>3-й курс (Бакалавр), Прикладная информатика, Национальный Исследовательский Университет Московский Институт Электронной Техники ('23)</li>
+                    <li><div>Возраст:</div>21 год</li>
+                    <li><div>Гражданство:</div>Россия</li>
+                </ul>
+            </div>
+            <div id="WhatIKnow" class="info_container">
+                <h3>Что я умею</h3>
+                <ul>
+                    <li><div>Языки программирования:</div>SWIFT, Shell, C#, Objective-C, C++, Python, SQL, HTML/CSS/JavaScript</li>
+                    <li><div>Программы:</div>Adobe Creative Pack (Photoshop, Illustrator, Premier), Unity3D, Xcode, Visual Studio, Visual Studio Code, Affinity Photo, Blender</li>
+                    <li><div>Языки:</div>Русский, Английский (Advanced), Французский (B2)</li>
+                    <li><div>Имел опыт работы с и интегрирования SDK:</div>TinySauce, GameAnalytics, Facebook, AdMob, UnityAds, UnityAnalytics</li>
+                    <li><div>Имел опыт работы с операционными системами:</div>MacOS, Linux, Windows</li>
+                    <li><div>Выпускал свои проекты на:</div>AppStore, GooglePlay</li>
+                </ul>
+            </div>
+            <div id="Projects" class="info_container">
+                <h3>Мои проекты <div style="font-weight: 200; display:inline-block;">(AppStore)</div></h3>
+                <div class="projects_container">
+                    <div>
+                        <a href="https://apps.apple.com/ru/app/hexanomia/id1535262998" target="_blank">
+                            <img src="Imgs/apps/Hexanomia_icon.png">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://apps.apple.com/ru/app/fish-city/id1583216926" target="_blank">
+                            <img src="Imgs/apps/FishCity_icon.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="projects_container">
+                    <div>
+                        <a href="https://apps.apple.com/us/app/tricky-path-merry-christmas/id1599964008?l=ru" target="_blank">
+                            <img src="Imgs/apps/TP_icon.png">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://apps.apple.com/us/app/jane-thunder/id1564790903" target="_blank">
+                            <img src="Imgs/apps/JaneThunder_icon.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </body>
+
+</html>

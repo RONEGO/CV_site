@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body
+{
+    min-width: 1000px;
+    background-color: rgba(30, 30, 30);
+}
+
+main
+{
+    padding-top: 200px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.photo
+{
+    width: 40%;
+    min-width: 400px;
+    height: 80vh;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    /* pointer-events: none; */
+}
+
+.gradient
+{
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(rgba(30, 30, 30,0), rgba(30, 30, 30));
+
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    bottom: 0px;
+}
+
+.social_networks_container
+{
+    width: 80%;
+    height: 15%;
+    display: table;
+    
+
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    bottom: 50px;
+}
+
+#language_switcher_container
+{
+    width: 40%;
+    height: 40px;
+    display: table;
+
+    position: absolute;
+    z-index: 1000;
+    left: 30%;
+    bottom: 20px;
+
+    background-color: rgb(40, 40, 40);
+    border-radius: 15px;
+}
+
+.language_switcher {
+    cursor: pointer;
+
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+
+    position: relative;
+    z-index: 1001;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(70, 70, 70);
+
+    user-select: none;
+    transition: all .2s ease-in-out;
+}
+
+#switcher {
+    width: 48%;
+    left: 1%;
+    top: 5%;
+    height: 90%;
+    
+    border-radius: 13px;
+    position: absolute;
+    z-index: 900;
+    
+    background-color: rgba(71, 160, 114);
+    transition: all .2s ease-in-out;
+}
+
+.social_networks_container div
+{
+    text-align: center;
+    display: table-cell;
+}
+
+.social_networks_container svg
+{
+    cursor: pointer;
+    
+    fill: white;
+    width: 50px;
+}
+
+.photo img
+{
+    width: 100%;
+    margin-bottom: 0px;
+
+    position: absolute;
+    z-index: 50;
+    left: 0px;
+    bottom: 0px;
+
+    pointer-events: none;
+}
+
+#icon_sm:hover
+{
+    transform: scale(1.25); 
+    fill: rgba(71, 160, 114);
+}
+
+.info_container
+{
+    padding: 5px;
+
+    margin-left: auto; 
+    margin-right: 0;
+    width: 50%;
+}
+
+.info_container h1
+{
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+}
+
+.info_container h2
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    color: rgba(71, 160, 114);
+}
+
+.info_container h3
+{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 40px;
+    color: white;
+}
+
+.info_container h4
+{
+    padding-left: 5%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 30px;
+    color: rgba(71, 160, 114);
+
+    margin-bottom: 20px;
+}
+
+.info_container ul
+{
+    padding-left: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: white;   
+}
+
+.info_container ul li
+{
+    padding-bottom: 20px;
+}
+
+.info_container ul li div
+{
+    padding-right: 10px;
+    display: inline;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgba(71, 160, 114);
+}
+
+.projects_container
+{
+    width: 100%;
+    display: table;
+}
+
+.projects_container div
+{
+    cursor: pointer;
+    display: table-cell;
+    height: 150px;
+    width: 150px;
+    max-width: 200px;
+}
+
+.projects_container div img
+{
+    position: relative;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 25px;
+    width: 75%;
+    min-width: 100px;
+    box-shadow: 0px 0px 10px rgba(71, 160, 114);
+
+    transition: all .2s ease-in-out;
+}
+
+.projects_container div img:hover
+{
+    box-shadow: 0px 0px 30px rgba(71, 160, 114);
+}
+
+.complany_worked{
+    padding-left: 10%;
+    padding-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    color: white;
+}
+
+.complany_worked h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    color: white;
+
+    display: inline-block;
+    margin-bottom: 0px;
+}
+.complany_worked h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 26px;
+    font-style: italic;
+    color: white;
+    padding-left: 15px;
+    
+    display: inline-block;
+    margin-bottom: 0px;
+}
+
+.complany_worked h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 23px;
+    color: white;
+    padding-left: 15px;
+    
+    display: block;
+    margin-bottom: 5px;
+}
